@@ -1,3 +1,7 @@
 export default function Home() {
-	return <div>Electrical CyberTunes website</div>
+	return (
+		<div>
+			<p>Hello</p>Electrical CyberTunes website
+		</div>
+	)
 }
