@@ -9,7 +9,8 @@
 		"eslint": "eslint .",
 		"stylelint": "stylelint '**/*.{css,scss,sass,less}'",
 		"fix:eslint": "eslint . --fix",
-		"fix:stylelint": "stylelint '**/*.{css,scss,sass,less}' --fix"
+		"fix:stylelint": "stylelint '**/*.{css,scss,sass,less}' --fix",
+		"prepare": "husky"
 	},
 	"lint-staged": {
 		"**/*.{js,ts,jsx,tsx}": [
@@ -40,6 +41,7 @@
 		"eslint-plugin-simple-import-sort": "^12.1.1",
 		"eslint-plugin-sonarjs": "^3.0.5",
 		"eslint-plugin-unicorn": "^61.0.2",
+		"husky": "^9.1.7",
 		"lint-staged": "^16.2.0",
 		"stylelint": "^16.24.0",
 		"stylelint-config-standard": "^39.0.0",
