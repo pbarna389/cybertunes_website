@@ -6,7 +6,20 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "eslint"
+		"eslint": "eslint .",
+		"stylelint": "stylelint '**/*.{css,scss,sass,less}'",
+		"fix:eslint": "eslint . --fix",
+		"fix:stylelint": "stylelint '**/*.{css,scss,sass,less}' --fix"
+	},
+	"lint-staged": {
+		"**/*.{js,ts,jsx,tsx}": [
+			"npm run fix:eslint",
+			"npm run eslint"
+		],
+		"**/*.{css,scss}": [
+			"npm run fix:stylelint",
+			"npm run stylelint"
+		]
 	},
 	"dependencies": {
 		"next": "15.5.4",
@@ -27,6 +40,11 @@
 		"eslint-plugin-simple-import-sort": "^12.1.1",
 		"eslint-plugin-sonarjs": "^3.0.5",
 		"eslint-plugin-unicorn": "^61.0.2",
+		"lint-staged": "^16.2.0",
+		"stylelint": "^16.24.0",
+		"stylelint-config-standard": "^39.0.0",
+		"stylelint-prettier": "^5.0.3",
+		"stylelint-scss": "^6.12.1",
 		"typescript": "^5",
 		"typescript-eslint": "^8.24.1"
 	}
