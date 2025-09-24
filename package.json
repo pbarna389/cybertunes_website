@@ -13,8 +13,12 @@
 		"prepare": "husky install"
 	},
 	"lint-staged": {
-		"*.{js,ts,jsx,tsx}": "eslint --fix",
-		"*.{css,scss}": "stylelint --fix"
+		"*.{js,ts,jsx,tsx}": [
+			"eslint --fix --max-warnings=0",
+			"tsc --noEmit"
+		],
+		"*.{css,scss}": "stylelint --fix --max-warnings=0",
+		"*.{json,yml,yaml,md}": "prettier --write"
 	},
 	"dependencies": {
 		"next": "15.5.4",
