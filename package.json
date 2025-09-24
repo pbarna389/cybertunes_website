@@ -10,17 +10,11 @@
 		"stylelint": "stylelint '**/*.{css,scss,sass,less}'",
 		"fix:eslint": "eslint . --fix",
 		"fix:stylelint": "stylelint '**/*.{css,scss,sass,less}' --fix",
-		"prepare": "husky"
+		"prepare": "husky install"
 	},
 	"lint-staged": {
-		"**/*.{js,ts,jsx,tsx}": [
-			"npm run fix:eslint",
-			"npm run eslint"
-		],
-		"**/*.{css,scss}": [
-			"npm run fix:stylelint",
-			"npm run stylelint"
-		]
+		"*.{js,ts,jsx,tsx}": "eslint --fix",
+		"*.{css,scss}": "stylelint --fix"
 	},
 	"dependencies": {
 		"next": "15.5.4",
